@@ -1,11 +1,11 @@
 <img
-  [src]="isOpened ?
+  [src]="isOpened() ?
     '../../../../../assets/chevron-up.svg' :
     '../../../../../assets/chevron-down.svg'"
   class="position-absolute"
   (click)="toggleTodoContent()">
 <div class="title" [ngClass]="{'isCompleted': todo.isCompleted}">{{ todo.title }}</div>
-@if (isOpened) {
+@if (isOpened()) {
   <div class="content">{{ todo.content }}</div>
 }
 <input

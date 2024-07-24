@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { Todo } from '../../models/Todo';
 import { NgClass } from '@angular/common';
 
@@ -11,10 +11,10 @@ import { NgClass } from '@angular/common';
 })
 export class TodoItemComponent {
   @Input() todo!: Todo;
-  isOpened = false;
+  isOpened = signal(false);
 
   toggleTodoContent() {
-    this.isOpened = !this.isOpened;
+    this.isOpened.set(!this.isOpened());
   }
 
   toggleIsCompleted() {

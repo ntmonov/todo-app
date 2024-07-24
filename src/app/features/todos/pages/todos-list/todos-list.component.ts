@@ -16,7 +16,6 @@ export class TodosListComponent {
   ) {}
 
   getAllTodos() {
-    console.log(this.todosService.getAllTodos());
     return this.todosService.getAllTodos();
   }
 }
