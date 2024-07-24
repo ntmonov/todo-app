@@ -18,4 +18,8 @@ export class TodosListComponent {
   getAllTodos() {
     return this.todosService.getAllTodos();
   }
+
+  fetchTodos() {
+    this.todosService.fetchTodos();
+  }
 }
