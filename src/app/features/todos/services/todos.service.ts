@@ -68,4 +68,8 @@ export class TodosService {
         this.todos.set(todos);
       });
   }
+
+  getTodoCount() {
+    return this.todos().length;
+  }
 }

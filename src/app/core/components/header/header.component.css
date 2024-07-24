@@ -1,0 +1,7 @@
+.todo-count {
+  top: 0;
+  right: -5px;
+  border-radius: 50%;
+  line-height: 1;
+  padding: 2px 5px;
+}
