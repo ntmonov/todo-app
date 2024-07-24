@@ -1,6 +1,7 @@
 import { Component, Input, signal } from '@angular/core';
 import { Todo } from '../../models/Todo';
 import { NgClass } from '@angular/common';
+import { TodosService } from '../../services/todos.service';
 
 @Component({
   selector: 'app-todo-item',
@@ -13,11 +14,17 @@ export class TodoItemComponent {
   @Input() todo!: Todo;
   isOpened = signal(false);
 
+  constructor(private todosService: TodosService) {}
+
   toggleTodoContent() {
     this.isOpened.set(!this.isOpened());
   }
 
   toggleIsCompleted() {
     this.todo.isCompleted = !this.todo.isCompleted;
+  }
+
+  deleteItem() {
+    this.todosService.deleteTodo(this.todo.id);
   }
 }

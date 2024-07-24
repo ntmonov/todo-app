@@ -9,9 +9,14 @@
 }
 
 
-img {
+img:first-of-type {
   right: 10px;
   top: 10px;
+}
+
+img:last-of-type {
+  right: 10px;
+  bottom: 10px;
 }
 
 .isCompleted {
