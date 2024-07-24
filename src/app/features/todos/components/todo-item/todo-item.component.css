@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 100%;
+  min-width: 250px;
+  border: 1px solid green;
+  padding: 10px;
+  position: relative;
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+img {
+  right: 10px;
+  top: 10px;
+}
+
+.isCompleted {
+  text-decoration: line-through;
+}

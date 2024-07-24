@@ -1,5 +1,15 @@
-<div class="todo-card">
-  <div class="title">{{ todo.title }}</div>
+<img
+  [src]="isOpened ?
+    '../../../../../assets/chevron-up.svg' :
+    '../../../../../assets/chevron-down.svg'"
+  class="position-absolute"
+  (click)="toggleTodoContent()">
+<div class="title" [ngClass]="{'isCompleted': todo.isCompleted}">{{ todo.title }}</div>
+@if (isOpened) {
   <div class="content">{{ todo.content }}</div>
-  <input type="checkbox" name="" id="" [checked]="todo.isCompleted">
-</div>
+}
+<input
+  type="checkbox"
+  [checked]="todo.isCompleted"
+  (change)="toggleIsCompleted()"
+/>
