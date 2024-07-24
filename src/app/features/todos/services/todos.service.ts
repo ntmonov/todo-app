@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Todo } from "../models/Todo";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TodosService {
   private todos: Todo[] = [
     {
@@ -14,5 +16,14 @@ export class TodosService {
 
   getAllTodos() {
     return this.todos;
+  }
+
+  addTodo(todo: any) {
+    const newTodo: Todo = {
+      id: this.todos[this.todos.length - 1].id + 1,
+      isCompleted: false,
+      ...todo
+    }
+    this.todos.push(newTodo);
   }
 }

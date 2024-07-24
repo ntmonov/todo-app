@@ -6,7 +6,6 @@ import { TodoItemComponent } from "../../components/todo-item/todo-item.componen
   selector: 'app-todos-list',
   standalone: true,
   imports: [TodoItemComponent],
-  providers: [TodosService],
   templateUrl: './todos-list.component.html',
   styleUrl: './todos-list.component.css'
 })
@@ -17,6 +16,7 @@ export class TodosListComponent {
   ) {}
 
   getAllTodos() {
+    console.log(this.todosService.getAllTodos());
     return this.todosService.getAllTodos();
   }
 }
