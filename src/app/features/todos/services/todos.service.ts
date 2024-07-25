@@ -72,4 +72,13 @@ export class TodosService {
   getTodoCount() {
     return this.todos().length;
   }
+
+  updateTodo(todo: Todo) {
+    const todoIndexToUpdate = this.todos().findIndex(t => t.id === todo.id);
+
+    this.todos.update(todos => {
+      todos.splice(todoIndexToUpdate, 1, todo);
+      return todos;
+    })
+  }
 }

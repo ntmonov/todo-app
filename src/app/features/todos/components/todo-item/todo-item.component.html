@@ -14,8 +14,47 @@
   (change)="toggleIsCompleted()"
 />
 <img
+  src="../../../../../assets/pencil.svg"
+  alt="Edit"
+  class="position-absolute"
+  (click)="openEditModal()"
+>
+<img
   src="../../../../../assets/trash.svg"
   alt="Trash"
   class="position-absolute"
   (click)="deleteItem()"
 >
+
+<ng-template #editModal>
+  <form [formGroup]="formGroup" (submit)="editItem()">
+    <div class="form-group">
+      <label for="todoTitle">Todo title</label>
+      <input
+        formControlName="title"
+        type="text"
+        class="form-control"
+        id="todoTitle"
+        aria-describedby="todoTitle"
+        placeholder="Enter title">
+    </div>
+
+    <div class="form-group">
+      <label for="todoContent">Todo content</label>
+      <textarea
+        formControlName="content"
+        rows="5"
+        class="form-control"
+        id="todoContent"
+        aria-describedby="todoContent"
+        placeholder="Enter content"></textarea>
+    </div>
+
+    <input
+      class="btn btn-secondary"
+      type="submit"
+      value="Update"
+      [disabled]="formGroup.invalid">
+  </form>
+
+</ng-template>
