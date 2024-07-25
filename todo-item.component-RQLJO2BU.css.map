@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/features/todos/components/todo-item/todo-item.component.css"],
-  "sourcesContent": [":host {\r\n  display: block;\r\n  width: 100%;\r\n  min-width: 250px;\r\n  border: 1px solid green;\r\n  padding: 10px;\r\n  position: relative;\r\n  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n\r\nimg {\r\n  right: 10px;\r\n  top: 10px;\r\n}\r\n\r\n.isCompleted {\r\n  text-decoration: line-through;\r\n}\r\n"],
-  "mappings": "AAAA,MACE,QAAS,MACT,MAAO,KACP,UAAW,MACX,OAAQ,IAAI,MAAM,MAJpB,QAKW,KACT,SAAU,SACV,WAAY,IAAI,IAAI,IAAI,IAAI,KAC9B,CAGA,IACE,MAAO,KACP,IAAK,IACP,CAEA,CAAC,YACC,gBAAiB,YACnB",
-  "names": []
-}
