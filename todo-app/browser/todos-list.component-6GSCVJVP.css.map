@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/todos/pages/todos-list/todos-list.component.css"],
+  "sourcesContent": [".todos-list {\r\n  display: flex;\r\n}\r\n"],
+  "mappings": "AAAA,CAAC,WACC,QAAS,IACX",
+  "names": []
+}
